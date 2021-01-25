@@ -1,0 +1,39 @@
+{
+    "memes": [
+        {
+            "id": 1,
+            "title": "Cat meme",
+            "likes": 0,
+            "description": "Funny cats LOL",
+            "image_url": "https://i.pinimg.com/736x/4d/8e/cc/4d8ecc6967b4a3d475be5c4d881c4d9c.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Javascript in a nutshell",
+            "likes": 0,
+            "description": "This dog GETS it.",
+            "image_url": "https://i.barkpost.com/wp-content/uploads/2015/02/featmeme.jpg?q=70&fit=crop&crop=entropy&w=808&h=500"
+        },
+        {
+            "id": 3,
+            "title": "Spider",
+            "likes": 0,
+            "description": "me irl",
+            "image_url": "https://ichef.bbci.co.uk/images/ic/704xn/p072ms6r.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Bern It!",
+            "likes": 0,
+            "description": "I am once again asking for your meme.",
+            "image_url": "https://i.redd.it/vakvnwrlzvc61.jpg"
+        },
+        {
+            "id": 5,
+            "title": "See you next fall!",
+            "likes": 0,
+            "description": "Got 'eeeeem",
+            "image_url": "https://i.pinimg.com/originals/ff/b3/0e/ffb30ea09a0576699f99d13110924c4d.gif"
+        }
+    ]
+}
