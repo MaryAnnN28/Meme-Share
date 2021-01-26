@@ -3,5 +3,12 @@ Rails.application.routes.draw do
   resources :comments
   resources :users
   resources :memes
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  # CUSTOM ROUTES 
+
+  # get '/memes', to: 'memes#index'
+  # get '/memes/:id', to: 'memes#show'
+  # post '/memes', to: 'memes#create'
+
+
 end
