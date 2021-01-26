@@ -16,6 +16,9 @@ class MemesController < ApplicationController
    end
 
 
+ 
+
+
 
 
 
