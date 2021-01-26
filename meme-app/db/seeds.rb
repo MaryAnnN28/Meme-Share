@@ -28,9 +28,6 @@ meme6 = Meme.create(title: "Wonka meme", likes: 0, description: "insert meme tex
 meme7 = Meme.create(title: "Spongebob meme", likes: 0, description: "insert meme text for meme7", img_url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/04/28/12/evil-kermit-meme.jpg", user_id: user7.id)
 meme8 = Meme.create(title: "Kermit meme", likes: 0, description: "insert meme text for meme8", img_url: "https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/2019-03/Screen%20Shot%202019-03-14%20at%2010.49.01%20AM_1.png", user_id: user9.id)
 
-
-
-
 comment1 = Comment.create(comment: "LOL so funny", user_id: user1.id, meme_id: meme1.id )
 comment2 = Comment.create(comment: "HHAHAHAHAHAHAH", user_id: user2.id, meme_id: meme2.id)
 comment3 = Comment.create(comment: "LMAO", user_id: user3.id, meme_id: meme3.id)
@@ -50,13 +47,13 @@ meme_comment6 = MemeComment.create(meme_id: meme6.id, comment_id: comment6.id)
 meme_comment7 = MemeComment.create(meme_id: meme7.id, comment_id: comment1.id)
 meme_comment8 = MemeComment.create(meme_id: meme8.id, comment_id: comment2.id)
 meme_comment9 = MemeComment.create(meme_id: meme5.id, comment_id: comment3.id)
-meme_comment10 = MemeComment.create(meme_id: meme4.id, comment_id: comment4.id)
-meme_comment12 = MemeComment.create(meme_id: meme1.id, comment_id: comment1.id)
-meme_comment13 = MemeComment.create(meme_id: meme2.id, comment_id: comment2.id)
-meme_comment14 = MemeComment.create(meme_id: meme5.id, comment_id: comment3.id)
+
+meme_comment10 = MemeComment.create(meme_id: meme4.id, comment_id: comment7.id)
+meme_comment12 = MemeComment.create(meme_id: meme1.id, comment_id: comment8.id)
+meme_comment13 = MemeComment.create(meme_id: meme2.id, comment_id: comment9.id)
+meme_comment14 = MemeComment.create(meme_id: meme5.id, comment_id: comment4.id)
 meme_comment15 = MemeComment.create(meme_id: meme6.id, comment_id: comment4.id)
 meme_comment16 = MemeComment.create(meme_id: meme7.id, comment_id: comment5.id)
-
 
 
 
