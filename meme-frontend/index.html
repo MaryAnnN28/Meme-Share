@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
-    <script type="text/javascript" src="./src/index.js"></script>
-    <title>Meme Share</title>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memes!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
+<body>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        
-    </nav>
-    
-    <div class="m-2 container-fluid">
-        <div class="card-columns" id="meme-container">
+  <!-- hero--------------------- Needed for Bulma------------------------------>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Memes</h1>
+          <h2 class="subtitle">Like your favorite meme</h2>
         </div>
+      </div>
+    </section>
+
+  <!-- columns----------------------------------------------------------------->
+    <div id="meme-container" class="columns is-multiline">
+      <!-- This is where all cards will go. -->
+    </div>
+
+  <!-- modal------------------------------------------------------------------->
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content has-background-white py-5 px-5">
+        
+      </div>
     </div>
     <form class="form">
       <div class="form-group">

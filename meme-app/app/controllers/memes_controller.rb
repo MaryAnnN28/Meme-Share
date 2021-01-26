@@ -1,24 +1,42 @@
 class MemesController < ApplicationController
 
-   def index  
-      render json: Meme.all.to_json({
-         include:{
-            comments:{
-               execpt: [:updated_at]
-            }
-         },
-         except: [:created_at, :updated_at]
-      })
+   def index 
+      render json: Meme.all.to_json(meme_serializer_options)
    end
 
+   def show
+      meme = Meme.find(params[:id])
+      render json: meme.to_json(meme_serializer_options) 
+   end
+
+   # Need to test out creating with user_id 
    def create
       meme = Meme.create(meme_params)
       render json: meme
    end
 
-   def meme_params
-      params.require(:meme).permit(:title, :description, :img_url)
 
+ 
+
+
+
+
+
+   private
+
+   def meme_params
+      params.require(:meme).permit(:title, :likes, :description, :img_url, :user_id)
+   end
+
+   def meme_serializer_options()
+      {
+         include: {
+            comments: {
+               except: [:updated_at, :meme_id, :id]
+            }
+         }, 
+         except: [:created_at, :updated_at]
+      }
    end
 
 
