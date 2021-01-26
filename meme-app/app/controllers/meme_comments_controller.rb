@@ -1,2 +1,3 @@
 class MemeCommentsController < ApplicationController
+    
 end

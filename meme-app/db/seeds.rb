@@ -28,35 +28,32 @@ meme6 = Meme.create(title: "Wonka meme", likes: 0, description: "insert meme tex
 meme7 = Meme.create(title: "Spongebob meme", likes: 0, description: "insert meme text for meme7", img_url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/04/28/12/evil-kermit-meme.jpg", user_id: user7.id)
 meme8 = Meme.create(title: "Kermit meme", likes: 0, description: "insert meme text for meme8", img_url: "https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/2019-03/Screen%20Shot%202019-03-14%20at%2010.49.01%20AM_1.png", user_id: user9.id)
 
-
-
-
 comment1 = Comment.create(comment: "LOL so funny", user_id: user1.id, meme_id: meme1.id )
 comment2 = Comment.create(comment: "HHAHAHAHAHAHAH", user_id: user2.id, meme_id: meme2.id)
 comment3 = Comment.create(comment: "LMAO", user_id: user3.id, meme_id: meme3.id)
 comment4 = Comment.create(comment: "ROFL", user_id: user4.id, meme_id: meme4.id)
-comment5 = Comment.create(comment: "I agree", user_id: users1.id, meme_id: meme1.id)
+comment5 = Comment.create(comment: "I agree", user_id: user1.id, meme_id: meme1.id)
 comment6 = Comment.create(comment: "So true", user_id: user2.id, meme_id: meme2.id)
 comment7 = Comment.create(comment: "WOW!", user_id: user3.id, meme_id: meme3.id)
 comment8 = Comment.create(comment: "ROFLMAO", user_id: user4.id, meme_id: meme4.id)
 comment9 = Comment.create(comment: "LUL", user_id: user5.id, meme_id: meme5.id)
 
-meme_comment1 = Meme_comment.create(meme_id: meme1.id , comment_id: comment1.id)
-meme_comment2 = Meme_comment.create(meme_id: meme2.id, comment_id: comment2.id)
-meme_comment3 = Meme_comment.create(meme_id: meme3.id, comment_id: comment3.id)
-meme_comment4 = Meme_comment.create(meme_id: meme4.id, comment_id: comment4.id)
-meme_comment5 = Meme_comment.create(meme_id: meme5.id, comment_id: comment5.id)
-meme_comment6 = Meme_comment.create(meme_id: meme6.id, comment_id: comment6.id)
-meme_comment7 = Meme_comment.create(meme_id: meme7.id, comment_id: comment1.id)
-meme_comment8 = Meme_comment.create(meme_id: meme8.id, comment_id: comment2.id)
-meme_comment9 = Meme_comment.create(meme_id: meme5.id, comment_id: comment3.id)
-meme_comment10 = Meme_comment.create(meme_id: meme4.id, comment_id: comment4.id)
-meme_comment12 = Meme_comment.create(meme_id: meme1.id, comment_id: comment1.id)
-meme_comment13 = Meme_comment.create(meme_id: meme2.id, comment_id: comment2.id)
-meme_comment14 = Meme_comment.create(meme_id: meme5.id, comment_id: comment3.id)
-meme_comment15 = Meme_comment.create(meme_id: meme6.id, comment_id: comment4.id)
-meme_comment16 = Meme_comment.create(meme_id: meme7.id, comment_id: comment5.id)
+meme_comment1 = MemeComment.create(meme_id: meme1.id , comment_id: comment1.id)
+meme_comment2 = MemeComment.create(meme_id: meme2.id, comment_id: comment2.id)
+meme_comment3 = MemeComment.create(meme_id: meme3.id, comment_id: comment3.id)
+meme_comment4 = MemeComment.create(meme_id: meme4.id, comment_id: comment4.id)
+meme_comment5 = MemeComment.create(meme_id: meme5.id, comment_id: comment5.id)
+meme_comment6 = MemeComment.create(meme_id: meme6.id, comment_id: comment6.id)
+meme_comment7 = MemeComment.create(meme_id: meme7.id, comment_id: comment1.id)
+meme_comment8 = MemeComment.create(meme_id: meme8.id, comment_id: comment2.id)
+meme_comment9 = MemeComment.create(meme_id: meme5.id, comment_id: comment3.id)
 
+meme_comment10 = MemeComment.create(meme_id: meme4.id, comment_id: comment7.id)
+meme_comment12 = MemeComment.create(meme_id: meme1.id, comment_id: comment8.id)
+meme_comment13 = MemeComment.create(meme_id: meme2.id, comment_id: comment9.id)
+meme_comment14 = MemeComment.create(meme_id: meme5.id, comment_id: comment4.id)
+meme_comment15 = MemeComment.create(meme_id: meme6.id, comment_id: comment4.id)
+meme_comment16 = MemeComment.create(meme_id: meme7.id, comment_id: comment5.id)
 
 
 
