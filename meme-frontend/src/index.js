@@ -73,4 +73,3 @@ const showMeme = (memeCard) => {
         modal.classList.remove('is-active')
     })
 }
-
