@@ -2,6 +2,7 @@ const BASE_URL = 'http://localhost:3000/memes'
 
 document.addEventListener("DOMContentLoaded", () => {
     getMemes()
+    createMeme()
 })
 
 const getMemes = () => {
@@ -19,7 +20,7 @@ const renderMemes = (meme) => {
 
     let image = document.createElement("img")
         image.classList.add("card-img-top")
-        image.src = meme.image_url
+        image.src = meme.img_url
        
     let cardBody = document.createElement('div')
         cardBody.classList.add('card-body')
@@ -42,3 +43,24 @@ const renderMemes = (meme) => {
     memeCard.append(image, cardBody, cardFooter)
     cardContainer.append(memeCard)
 }
+
+function createMeme(){
+    document.querySelector('form').addEventListener('submit', (event) => {
+        event.preventDefault()
+        let newMeme = {
+            title: event.target.title.value,
+            description: event.target.description.value,
+            img_url: event.target.img_url.value
+        }
+
+        fetch(BASE_URL, {
+            headers: {"Content-Type": "application/json"},
+            method: "POST",
+            body: JSON.stringify(newMeme)
+        })
+        .then(r => r.json())
+        .then(meme => renderMemes(meme))
+
+        console.log(newMeme)
+    })
+}  
