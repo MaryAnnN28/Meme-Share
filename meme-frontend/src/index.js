@@ -31,7 +31,7 @@ const renderMemes = (meme) => {
 
     let image = document.createElement("img");
         image.classList.add("card-img-top", "center")
-        image.src = meme.image_url
+        image.src = meme.img_url
         //img.card-img-top
        
     let cardTitle = document.createElement('h3')
