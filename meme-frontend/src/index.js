@@ -12,45 +12,33 @@ const getMemes = () => {
 }
 
 const renderMemes = (meme) => {
-    let cardContainers = document.querySelector('#meme-container')
+    let cardContainer = document.querySelector('#meme-container')
     
-    let colFeat = document.createElement('div')
-        colFeat.classList.add("columns features")
-
-    let colFeat = document.createElement('div')
-        colFeat.classList.add("column is-4")
-
-    let colFeat = document.createElement('div')
-        colFeat.classList.add("card is-shady")
-
-    let colFeat = document.createElement('div')
-        colFeat.classList.add("card-image")
-
-    let imageFig = document.createElement('figure')
-        imageFig.classList.add("image is-4by3")
+    let memeCard = document.createElement('div')
+        memeCard.classList.add("card")
 
     let image = document.createElement("img")
-        image.classList.add("modal-button")
+        image.classList.add("card-img-top")
         image.src = meme.image_url
-        //needs data-target "modal-image4"
+       
+    let cardBody = document.createElement('div')
+        cardBody.classList.add('card-body')
 
-    
+    let cardTitle = document.createElement('h5')
+        cardTitle.classList.add('card-title')
+        cardTitle.innerText = meme.title
 
+    let cardDesc = document.createElement('p')
+        cardDesc.innerText = meme.description
 
+    let cardFooter = document.createElement('div')
+        cardFooter.classList.add('card-footer')
 
+    let cardText = document.createElement('small')
+        cardText.innerText = "We can put likes and others here"
 
-    let colFeat = document.createElement('div')
-        colFeat.classList.add("card-content modal-button")
-        // colFeat.data-target = "modal-card2"
-        //needs data-target
-
-    let cardContent = document.createElement('div')
-        cardContent.classList.add("card-content modal-button")
-        //needs data-target "modal-card2"
-
-    let content = document.createElement('div')
-        content.classList.add("content")
-
-    
-
+    cardFooter.appendChild(cardText)
+    cardBody.append(cardTitle, cardDesc)
+    memeCard.append(image, cardBody, cardFooter)
+    cardContainer.append(memeCard)
 }
