@@ -1,7 +1,7 @@
 class MemesController < ApplicationController
 
    def index 
-      render :json Meme.all
+      render json: Meme.all
    end
 
 
