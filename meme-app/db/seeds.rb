@@ -51,7 +51,6 @@ meme_comment6 = MemeComment.create(meme_id: meme6.id, comment_id: comment6.id)
 meme_comment7 = MemeComment.create(meme_id: meme7.id, comment_id: comment1.id)
 meme_comment8 = MemeComment.create(meme_id: meme8.id, comment_id: comment2.id)
 meme_comment9 = MemeComment.create(meme_id: meme5.id, comment_id: comment3.id)
-
 meme_comment10 = MemeComment.create(meme_id: meme4.id, comment_id: comment7.id)
 meme_comment12 = MemeComment.create(meme_id: meme1.id, comment_id: comment8.id)
 meme_comment13 = MemeComment.create(meme_id: meme2.id, comment_id: comment9.id)

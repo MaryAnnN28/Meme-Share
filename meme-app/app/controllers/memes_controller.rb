@@ -15,13 +15,6 @@ class MemesController < ApplicationController
       render json: meme
    end
 
-
- 
-
-
-
-
-
    private
 
    def meme_params
