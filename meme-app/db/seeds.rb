@@ -28,9 +28,9 @@ meme2 = Meme.create(title: "Javascript in a nutshell", likes: 0, description: "T
 meme3 = Meme.create(title: "Spider", likes: 0, description: "me irl", img_url: "https://ichef.bbci.co.uk/images/ic/704xn/p072ms6r.jpg", user_id:user6.id)
 meme4 = Meme.create(title: "Bern It!", likes: 0, description: "I am once again asking for your meme.", img_url: "https://i.redd.it/vakvnwrlzvc61.jpg", user_id: user3.id)
 meme5 = Meme.create(title: "See you next fall!", likes: 0, description: "Got 'eeeeem", img_url: "https://i.redd.it/vakvnwrlzvc61.jpg", user_id:user8.id)
-meme6 = Meme.create(title: "Wonka meme", likes: 0, description: "insert meme text for meme6", img_url: "https://ftw.usatoday.com/wp-content/uploads/sites/90/2017/05/spongebob.jpg", user_id:user5.id)
-meme7 = Meme.create(title: "Spongebob meme", likes: 0, description: "insert meme text for meme7", img_url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/04/28/12/evil-kermit-meme.jpg", user_id: user7.id)
-meme8 = Meme.create(title: "Kermit meme", likes: 0, description: "insert meme text for meme8", img_url: "https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/2019-03/Screen%20Shot%202019-03-14%20at%2010.49.01%20AM_1.png", user_id: user9.id)
+meme6 = Meme.create(title: "i WaNnA sPeAk To YoUr MaNaGeR!", likes: 0, description: "Retail life be like:", img_url: "https://ftw.usatoday.com/wp-content/uploads/sites/90/2017/05/spongebob.jpg", user_id:user5.id)
+meme7 = Meme.create(title: "When I receive a 1000 word text", likes: 0, description: "Just reply with 'k'", img_url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/04/28/12/evil-kermit-meme.jpg", user_id: user7.id)
+meme8 = Meme.create(title: "You were born in 1999?", likes: 0, description: "Tell me how much you love the 90's", img_url: "https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/2019-03/Screen%20Shot%202019-03-14%20at%2010.49.01%20AM_1.png", user_id: user9.id)
 
 comment1 = Comment.create(comment: "LOL so funny", user_id: user1.id, meme_id: meme1.id )
 comment2 = Comment.create(comment: "HHAHAHAHAHAHAH", user_id: user2.id, meme_id: meme2.id)

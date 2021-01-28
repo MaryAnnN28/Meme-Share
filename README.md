@@ -1,3 +1,33 @@
+* Getting the comments to show each card
+    - Front-end : Alex 
+    - Back-end: Mary Ann
+
+* Get likes to show on card
+    - Front-end : Brian  
+
+* Making it pretty 
+
+* Create Meme's Form 
+    - Front-end : Brian
+    - Back-end : Mary Ann
+
+* Show users on Page 
+    - Front-end: Brian/Alex 
+
+* Dark Toggle Mode 
+    - Front End : EVERYBODY 
+
+* Filter/Drop (Most Likes, Most Popular)
+    - Front End: Mary Ann 
+
+
+
+
+
+
+
+
+
 Pushing Instructions:
 
     git add .

@@ -9,16 +9,21 @@ class MemesController < ApplicationController
       render json: meme.to_json(meme_serializer_options) 
    end
 
-   # Need to test out creating with user_id 
    def create
       meme = Meme.create(meme_params)
       render json: meme
    end
 
+
    def update
       Meme.find(params[:id]).update(meme_params)
       render json: Meme.find(params[:id])
    end
+
+  
+   def destroy
+   end
+
 
    private
 
