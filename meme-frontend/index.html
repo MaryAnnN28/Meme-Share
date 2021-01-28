@@ -28,13 +28,28 @@
   <!-- modal------------------------------------------------------------------->
     <div class="modal">
       <div class="modal-background"></div>
-      <div class="modal-content has-background-white py-5 px-5">
-        
+      <div id="modal-meme-content" class="modal-content has-background-white py-5 px-5">
+        <div class="content">
+
+        </div>
+
+        <h3><strong>Comments:</strong> </h3>
+        <form id="commentForm">
+          <input name="comment" class="form-control mb-2" type="text"placeholder="Add a comment">
+          <br>
+          <input class="btn btn-primary" type="submit">
+        </form>
+        <br>
+        <div id="commentArea">
+          <ul class="comments">
+
+          </ul>
+        </div>
       </div>
     </div>
   
   <!-- create form------------------------------------------------------------->
-    <form class="form">
+    <form id="memeForm">
       <div class="form-group">
         <h3>Create Meme</h3>
             <input name="title" class="form-control mb-2" type="text"placeholder="Name">
@@ -54,6 +69,6 @@
     </footer>
   
     <script src="src/index.js"></script>
-    <script src="src/memes.js"></script>
+    <script src="src/meme.js"></script>
   </body>
 </html>
