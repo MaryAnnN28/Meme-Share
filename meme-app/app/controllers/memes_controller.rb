@@ -14,12 +14,14 @@ class MemesController < ApplicationController
       render json: meme
    end
 
-   def update 
-   end
 
+   def update
+      Meme.find(params[:id]).update(meme_params)
+      render json: Meme.find(params[:id])
+   end
+  
    def destroy
    end
-   
 
    private
 

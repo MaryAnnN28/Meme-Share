@@ -15,12 +15,17 @@ class CommentsController < ApplicationController
       render json: comment
    end
 
+   def update
+      Comment.find(params[:id]).update(comment_params)
+      render json: Comment.find(params[:id])
+   end
+
    
    
    private
 
    def comment_params
-      params.require(:comment).permit(:comment, :user_id, :meme_id)
+      params.permit(:comment, :user_id, :meme_id)
    end
 
 
