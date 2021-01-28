@@ -133,7 +133,11 @@ const addComment = (memeCard, meme) => {
 
     commentForm.addEventListener('submit', (event) => {
         event.preventDefault()
-        currentComments = meme.comments
+        
+        let commentArea = document.querySelector('.comments')
+        let comment = document.createElement('li')
+            comment.innerText = event.target.comment.value
+        commentArea.appendChild(comment)
 
         let newComment = {
             comment: event.target.comment.value,
@@ -147,34 +151,17 @@ const addComment = (memeCard, meme) => {
             reqPackage.method = "POST"
             reqPackage.body = JSON.stringify(newComment)
 
+        
+
         fetch("http://localhost:3000/comments", reqPackage)
             .then(res => res.json())
-            // .then(data => postComment(data, currentComments, meme))
             .then(data => console.log(data))
-        
+    
         commentForm.reset()
+        
     })
     
 }
 
-// const postComment = (data, currentComments, meme) => {
-    
-
-//     let newComments = currentComments.push(data)
-
-//     console.log(newComments)
-
-//     let test = {
-//         comments: newComments
-//     }
-
-//     let reqPackage = {}
-//         reqPackage.headers = {"Content-Type" : "application/json"}
-//         reqPackage.method = "PATCH"
-//         reqPackage.body = JSON.stringify(test)
-
-//     fetch(BASE_URL + meme.id, reqPackage)
-//         .then(res => res.json())
-//         .then(data => console.log(data))
-    
-// }
+//div id="commentArea"
+    //ul class="comments"
