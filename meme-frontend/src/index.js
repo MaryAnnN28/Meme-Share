@@ -112,6 +112,47 @@ function createMeme(){
     })
 }  
 
+
+
+/************** FEATURE TO SORT & FILTER MEMES ******************/
+
+const likedBtn = document.querySelector('liked-btn')
+const newestBtn = document.querySelector('newest-btn')
+const oldestBtn = document.querySelector('oldest-btn')
+
+// EVENT LISTENERS 
+
+likedBtn.addEventListener('click', mostLiked)
+newestBtn.addEventListener('click', newestMemes)
+oldestBtn.addEventListener('click', oldestMemes)
+
+
+// EVENT HANDLERS
+const mostViral = (memeCard) => {
+    
+    let viralBtn = document.querySelector('viral-btn')
+    viralBtn.addEventListener('click', (event) => {
+        
+    })
+}
+
+
+const mostLiked = () => {
+
+}
+
+const newestMemes = () => {
+
+}
+
+
+const oldestMemes = () => {
+
+}
+/****************************************************************/
+
+
+
 const showComments = (comment) => {
     const commentArea = document.querySelector(".comments")
    
@@ -163,5 +204,3 @@ const addComment = (memeCard, meme) => {
     
 }
 
-//div id="commentArea"
-    //ul class="comments"
