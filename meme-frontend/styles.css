@@ -43,11 +43,60 @@ h5 {
 }
 
 
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #404040;
+  }
+  
+  header {
+    float: left;
+    width: 225px;
+    height: auto;
+    border-right: solid #404040 1px;
+    border-bottom: solid #404040 1px;
+    border-radius: 0 0 6px 0;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    color: #3493d5;
+    margin: 10px 0;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  nav ul {
+    margin-left: 15px;
+  }
+  
+  nav ul li {
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  nav ul li:hover {
+    background-color: #f1a458;
+    color: #fff;
+
+
    /* CSS for Filter  */
 
    .container {
     overflow: hidden;
     
+
   }
   
   .filterDiv {
@@ -81,10 +130,19 @@ h5 {
     background-color: rgb(221, 221, 221);
   }
   
+
+
+  .form ul {
+    position:absolute;
+    top:-19px;
+    right: 10px;
+  }
+
   /* Add a dark background to the active button */
   .btn.primary {
     background-color: #666;
     color: white;
   }
+
 
 

@@ -19,9 +19,11 @@ class MemesController < ApplicationController
       Meme.find(params[:id]).update(meme_params)
       render json: Meme.find(params[:id])
    end
+
   
    def destroy
    end
+
 
    private
 
@@ -39,6 +41,8 @@ class MemesController < ApplicationController
          except: [:created_at, :updated_at]
       }
    end
+   
+   
 
 
 end

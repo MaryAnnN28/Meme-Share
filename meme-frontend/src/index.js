@@ -1,6 +1,8 @@
 const BASE_URL = 'http://localhost:3000/memes/'
 
+
 USER = "Annonymous"
+
 
 document.addEventListener("DOMContentLoaded", () => {
     getMemes()
@@ -24,14 +26,18 @@ const renderMemes = (meme) => {
     let memeCard = document.createElement('div')
         memeCard.classList.add("card")
         //div.card
+
         // memeCard.addEventListener('click', () => {
         //     showMeme(memeCard, meme)
         // })
+
     
     let cardContent = document.createElement('div')
         cardContent.classList.add("card-content")
         cardContent.addEventListener('click', () => {
+
             showMeme(memeCard, meme)
+
         })
 
     let image = document.createElement("img");
@@ -55,9 +61,22 @@ const renderMemes = (meme) => {
         cardFooter.classList.add('card-footer-item')
 
     let cardText = document.createElement('small')
-        cardText.innerText = "Likes: " + meme.likes
+
+        cardText.innerText = `${meme.likes} likes`
+    
+    let cardButton = document.createElement('button')
+        cardButton.id = meme.id
+        cardButton.className = "like-button"
+        cardButton.innerText = "👍"
+        cardButton.addEventListener('click', () => {
+            likeMeme(meme, cardText)
+            console.log(meme)
+
+        })
+
 
     cardFooter.appendChild(cardText)
+        cardText.appendChild(cardButton)
 
 footerClass.appendChild(cardFooter)
 cardContent.append(cardTitle, image, lineBreak, cardDesc)
@@ -78,15 +97,24 @@ const showMeme = (memeCard, meme) => {
     const modal = document.querySelector('.modal')
     modal.classList.add('is-active')
 
-    modalBg.addEventListener('click', () => {
-        modal.classList.remove('is-active')
-    })
+
+
+    let cardButton = document.querySelector(".like-button")
+    console.log(cardButton)
+    // cardButton.addEventListener('click', () => {
+    //     likeMeme(meme, cardText)
+    //     console.log(meme)
+
+    // })
+
+
 
     const commentArea = document.querySelector(".comments")
     commentArea.innerHTML = ""
 
     meme.comments.forEach(showComments)
     addComment(memeCard, meme)
+
 }
 
 function createMeme(){
@@ -112,6 +140,27 @@ function createMeme(){
     })
 }  
 
+
+/******************** FEATURE LIKE MEMES ************************/
+
+function likeMeme(meme, cardText){
+    let newLikes = {
+      likes: +cardText.innerText.split(" ")[0] + 1
+    }
+  
+    let reqPack = {
+      headers: {"Content-Type": "application/json"},
+      method: "PATCH",
+      body: JSON.stringify(newLikes)
+    }
+  
+    fetch(BASE_URL + meme.id, reqPack)
+      .then(res => res.json())
+      .then(getMemes)
+  
+  }
+
+/****************************************************************/
 
 
 /************** FEATURE TO SORT & FILTER MEMES ******************/
@@ -150,6 +199,7 @@ const oldestMemes = () => {
 
 }
 /****************************************************************/
+
 
 
 
@@ -203,4 +253,3 @@ const addComment = (memeCard, meme) => {
     })
     
 }
-
