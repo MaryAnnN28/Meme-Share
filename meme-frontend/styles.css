@@ -26,7 +26,7 @@ h5 {
 }
 
 
-/* body {
+body {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -127,4 +127,10 @@ h5 {
     padding: 20px;
     margin-bottom: 20px;
   }
-   */
+  
+
+  .form ul {
+    position:absolute;
+    top:-19px;
+    right: 10px;
+  }

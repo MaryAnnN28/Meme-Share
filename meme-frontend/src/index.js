@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000/memes'
+const BASE_URL = 'http://localhost:3000/memes/'
 
 document.addEventListener("DOMContentLoaded", () => {
     getMemes()
@@ -23,12 +23,13 @@ const renderMemes = (meme) => {
     let memeCard = document.createElement('div')
         memeCard.classList.add("card")
         //div.card
-        memeCard.addEventListener('click', () => {
-            showMeme(memeCard)
-        })
+       
     
     let cardContent = document.createElement('div')
         cardContent.classList.add("card-content")
+        cardContent.addEventListener('click', () => {
+            showMeme(memeCard)
+        })
 
     let image = document.createElement("img");
         image.classList.add("card-img-top", "center")
@@ -49,9 +50,20 @@ const renderMemes = (meme) => {
         cardFooter.classList.add('card-footer-item')
 
     let cardText = document.createElement('small')
-        cardText.innerText = "We can put likes and others here"
+        cardText.innerText = `${meme.likes} likes`
+    
+    let cardButton = document.createElement('button')
+        cardButton.id = meme.id
+        cardButton.className = "like-button"
+        cardButton.innerText = "👍"
+        cardButton.addEventListener('click', () => {
+            likeMeme(meme, cardText)
+            console.log(meme)
+
+        })
 
     cardFooter.appendChild(cardText)
+        cardText.appendChild(cardButton)
 
 footerClass.appendChild(cardFooter)
 cardContent.append(image, cardTitle, cardDesc)
@@ -71,9 +83,20 @@ const modalBg = document.querySelector('.modal-background')
 const modal = document.querySelector('.modal')
 modal.classList.add('is-active')
 
+
+let cardButton = document.querySelector(".like-button")
+console.log(cardButton)
+// cardButton.addEventListener('click', () => {
+//     likeMeme(meme, cardText)
+//     console.log(meme)
+
+// })
+
 modalBg.addEventListener('click', () => {
     modal.classList.remove('is-active')
 })
+
+
 }
 
 function createMeme(){
@@ -96,3 +119,20 @@ function createMeme(){
         console.log(newMeme)
     })
 }  
+
+function likeMeme(meme, cardText){
+    let newLikes = {
+      likes: +cardText.innerText.split(" ")[0] + 1
+    }
+  
+    let reqPack = {
+      headers: {"Content-Type": "application/json"},
+      method: "PATCH",
+      body: JSON.stringify(newLikes)
+    }
+  
+    fetch(BASE_URL + meme.id, reqPack)
+      .then(res => res.json())
+      .then(getMemes)
+  
+  }
