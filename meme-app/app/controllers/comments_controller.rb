@@ -11,7 +11,9 @@ class CommentsController < ApplicationController
    end 
 
    def create
-      comment = Comment.create(comment_params)
+      comment = Comment.new(comment_params)
+      comment.user_id = User.first.id
+      comment.save
       render json: comment
    end
 
@@ -20,18 +22,22 @@ class CommentsController < ApplicationController
       render json: Comment.find(params[:id])
    end
 
+   def destroy
+      comment = Comment.find(params[:id]).destroy
+      render json: Comment.all.to_json(comment_serializer_options)
+   end
    
    
    private
 
    def comment_params
-      params.permit(:comment, :user_id, :meme_id)
+      params.permit(:comment, :user_id, :meme_id, :id)
    end
 
 
    def comment_serializer_options
       {
-         except: [:updated_at, :id]
+         except: [:updated_at]
       }
    end
 
