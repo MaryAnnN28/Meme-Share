@@ -251,9 +251,8 @@ function likeMeme(meme, cardText){
 /****************************************************************/
 
 
+
 /************** FEATURE TO SORT & FILTER MEMES ******************/
-
-
 
 const filterButtons = () => {
     const allBtn = document.querySelector('#show-all')
@@ -275,6 +274,7 @@ const filterButtons = () => {
 
 
 // EVENT HANDLERS
+
 const showAll = () => {
     document.querySelector('#meme-container').innerHTML = ""
     allOff()
@@ -283,6 +283,7 @@ const showAll = () => {
     allMemesUnsort.forEach(renderMemes)
 
 }
+
 
 const mostViral = () => {
     document.querySelector('#meme-container').innerHTML = ""
@@ -293,7 +294,6 @@ const mostViral = () => {
     result.forEach(meme => renderMemes(meme))
 }
 
-
 const mostLiked = () => {
     document.querySelector('#meme-container').innerHTML = ""
     allOff()
@@ -301,6 +301,7 @@ const mostLiked = () => {
         likedBtn.classList.add('primary')
     result = allMemes.sort(function(a, b){return b.likes - a.likes})
     result.forEach(meme => renderMemes(meme))
+
 }
 
 const newestMemes = () => {
@@ -406,6 +407,15 @@ const deleteMeme = (meme) => {
 }
 
 
+// For Toggle Dark Mode Function 
+
+
+const bodyBg = document.body
+const darkToggle = document.querySelector("#slider")
+darkToggle.addEventListener("click", function() {
+  bodyBg.classList.toggle("dark-mode")
+})
+
 
 const editComment = (comment) => {
     console.log('click!')
@@ -421,3 +431,4 @@ const deleteComment = (comment) => {
     
     getMemes()
 }
+

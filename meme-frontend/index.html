@@ -12,6 +12,7 @@
 
   <!-- hero--------------------- Needed for Bulma------------------------------>
     <section class="hero">
+
     <!-- <section class="hero is-primary"> -->
       <div class="hero-body">
         <div class="container">
@@ -20,8 +21,19 @@
       </div>
     </section>
 
+
+    <!------------------Toggle Dark Mode ------------------->
+
+  <div align="right" class="toggle-container">
+    Dark Mode &nbsp; &nbsp; &nbsp; &nbsp; <br>
+    <label class="switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div id="slider" class="slider round"></div>
+    </label>
+  </div>
+
   <!-- filters ---------Mary Ann working on------------------------------------->
-    <br><br>
+  
 
    <div id="myBtnContainer">
     <button id="show-all" class="btn" name="show-all"> SHOW ALL</button>
@@ -31,6 +43,10 @@
     <button id="oldest-btn" class="btn" name="oldest-btn"> OLDEST</button>
   </div> 
  
+      <div align="right" id="type-filter" class="type-filter">
+      <input class="type-filter" id="filter" type="text" id="filter" placeholder="Type to filter" />
+    </div>
+      
   <br><br>
 
 
@@ -63,6 +79,7 @@
     </div>
   
   <!-- create form------------------------------------------------------------->
+
     <form class="memeForm" id="memeForm">
       <div class="form-group">
         <ul>
@@ -74,6 +91,15 @@
         </ul>
       </div>
     </form>             
+
+    <!------------Previous & Next Page Buttons for Bottom of Memes Card ------------->
+    <br>
+  <center>
+    <a href="#" class="previous"><b>&laquo;</b> Previous</a>
+    <a href="#" class="next">Next <b>&raquo;</b> </a>
+  </center>
+
+
 <!-- footer-------------------------------------------------------------------->
     <footer class="footer">
       <div class="content has-text-centered">

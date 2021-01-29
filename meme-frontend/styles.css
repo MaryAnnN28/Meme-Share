@@ -58,7 +58,7 @@ h5 {
 .comments li {
   background-color: #fff3a9;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 
@@ -81,6 +81,7 @@ header {
   padding: 10px;
   margin-right: 10px;
 }
+
 
 h1 {
   font-family: 'Great Vibes', cursive;
@@ -154,6 +155,98 @@ nav ul li:hover {
   color: white;
   font-weight: bold;
 }
+
+
+  /*------------Previous & Next Page Buttons for Bottom of Memes Card ------------- */
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 16px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .next {
+    background-color: #43e4df;
+    color: white;
+  }
+
+
+
+   /*------------Toggle Button for Dark Mode ------------- */
+
+  .switch {
+    display: inline-block;
+    height: 34px;
+    position: absolute;
+    width: 70px;
+    right: 20px;
+    top: 510px;
+  
+  }
+
+  .switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #43e4df;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    right: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #000000;
+  }
+  
+  input:checked + .slider:before {
+    background-color: #ffffff;
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+    
+  
+
+  /*-----Styling for dark mode when the toggle is switched---- */
+
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
 
 .column {
   display: flex;
