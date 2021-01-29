@@ -3,4 +3,5 @@ class Comment < ApplicationRecord
    has_many :memes, through: :meme_comments
 
    belongs_to :meme
+   belongs_to :user
 end
