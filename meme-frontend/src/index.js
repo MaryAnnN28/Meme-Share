@@ -163,31 +163,36 @@ function likeMeme(meme, cardText){
 /****************************************************************/
 
 
+
 /************** FEATURE TO SORT & FILTER MEMES ******************/
 
-const likedBtn = document.querySelector('liked-btn')
-const newestBtn = document.querySelector('newest-btn')
-const oldestBtn = document.querySelector('oldest-btn')
+function filterBar() {
+    // const filterDiv = document.querySelector("#myBtnContainer")
 
-// EVENT LISTENERS 
-
-likedBtn.addEventListener('click', mostLiked)
-newestBtn.addEventListener('click', newestMemes)
-oldestBtn.addEventListener('click', oldestMemes)
-
-
-// EVENT HANDLERS
-const mostViral = (memeCard) => {
+    const mostLikedBtn = document.querySelector('liked-btn')
+    mostLikedBtn.addEventListener('click', mostLiked(meme))
     
-    let viralBtn = document.querySelector('viral-btn')
-    viralBtn.addEventListener('click', (event) => {
-        
-    })
+    const viralBtn = document.querySelector('viral-btn')
+    viralBtn.addEventListener('click', mostViral)
+    
+    const newestBtn = document.querySelector('newest-btn')
+    newestBtn.addEventListener('click', newestMemes)
+
+    const oldestBtn = document.querySelector('oldest-btn')
+    oldestBtn.addEventListener('click', oldestMemes)
+
 }
 
 
-const mostLiked = () => {
+// EVENT HANDLERS
 
+
+const mostLiked = (meme) => {
+   
+}
+
+const mostViral = (meme) => {
+ 
 }
 
 const newestMemes = () => {
@@ -253,3 +258,13 @@ const addComment = (memeCard, meme) => {
     })
     
 }
+
+
+// For Toggle Dark Mode Function 
+
+
+const bodyBg = document.body
+const darkToggle = document.querySelector("#slider")
+darkToggle.addEventListener("click", function() {
+  bodyBg.classList.toggle("dark-mode")
+})

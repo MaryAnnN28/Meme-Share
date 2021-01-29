@@ -11,24 +11,42 @@
 <body>
 
   <!-- hero--------------------- Needed for Bulma------------------------------>
-    <section class="hero is-primary">
+    <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">Memes</h1>
-          <h2 class="subtitle">Like your favorite meme</h2>
+          <img src= "https://i.imgur.com/rpG0pVW.gif" alt="meme banner" />
         </div>
       </div>
     </section>
 
+
+    <!------------------Toggle Dark Mode ------------------->
+
+  <div align="right" class="toggle-container">
+    Dark Mode &nbsp; &nbsp; &nbsp; &nbsp; <br>
+    <label class="switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div id="slider" class="slider round"></div>
+    </label>
+  </div>
+
   <!-- filters ---------Mary Ann working on------------------------------------->
-    <br><br>
+  
 
    <div id="myBtnContainer">
-    <button class="btn primary" onclick="functionAll('all')"> <b>SHOW ALL</b></button>
-    <button class="btn" name="viral-btn" onclick="function1('viral')"> MOST VIRAL</button>
-    <button class="btn" name="liked-btn" onclick="function2('liked')"> MOST LIKED</button>
-    <button class="btn" name="newest-btn" onclick="function2('newest')"> NEWEST</button>
-    <button class="btn" name="oldest-btn" onclick="function4('oldest')"> OLDEST</button>
+    <button id="all-memes" class="btn primary" onclick="functionAll('all')"> <b>SHOW ALL</b></button>
+    <button class="btn" id="viral-memes" name="viral-btn" onclick="function1('viral')"> MOST VIRAL</button>
+    <button class="btn" id="liked-memes" name="liked-btn" onclick="function2('liked')"> MOST LIKED</button>
+    <button class="btn" id="newest-memes" name="newest-btn" onclick="function2('newest')"> NEWEST</button>
+    <button class="btn" id="oldest-memes" name="oldest-btn" onclick="function4('oldest')"> OLDEST</button>
+
+
+    <div align="right" id="type-filter" class="type-filter">
+      <input class="type-filter" id="filter" type="text" id="filter" placeholder="Type to filter" />
+    </div>
+      
+    
+    
   </div> 
  
   <br><br>
@@ -63,8 +81,8 @@
     </div>
   
   <!-- create form------------------------------------------------------------->
-    <form id="memeForm">
-      <div class="form-group">
+  <div class="form-group">
+        <form id="memeForm">
         <ul>
         <h3>Create Meme</h3>
             <li><input name="title" class="form-control mb-2" type="text"placeholder="Name">
@@ -74,6 +92,15 @@
           </ul>
       </div>
     </form>             
+
+    <!------------Previous & Next Page Buttons for Bottom of Memes Card ------------->
+    <br>
+  <center>
+    <a href="#" class="previous"><b>&laquo;</b> Previous</a>
+    <a href="#" class="next">Next <b>&raquo;</b> </a>
+  </center>
+
+
 <!-- footer-------------------------------------------------------------------->
     <footer class="footer">
       <div class="content has-text-centered">
