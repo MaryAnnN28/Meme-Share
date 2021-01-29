@@ -189,8 +189,8 @@ nav ul li:hover {
     height: 34px;
     position: absolute;
     width: 70px;
-    right: 20px;
-    top: 510px;
+    right: 29px;
+    top: 423px;
   
   }
 
@@ -248,6 +248,14 @@ nav ul li:hover {
     color: white;
   }
 
-.column {
-  display: flex;
-}
+  .column {
+    display: flex;
+  }
+
+  .filter {
+    display: inline-block;
+    position: absolute;
+    width: 140px;
+    left: 10px;
+    top: 470px;
+  }

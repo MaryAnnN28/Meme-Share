@@ -60,7 +60,7 @@ const renderMemes = (meme) => {
         cardDesc.classList.add("card-description")
         cardDesc.innerText = meme.description
 
-    let footerClass = document.createElement('footer')
+    let footerClass = document.createElement('div')
         footerClass.classList.add('card-footer')
 
     let cardFooter = document.createElement('div')
@@ -194,7 +194,7 @@ const showComments = (comment) => {
     commentArea.append(commentPostInfo, commentText)
 }
 
-const addComment = (memeCard, meme) => {
+const addComment = (meme) => {
     const commentForm = document.querySelector('#commentForm')
 
     commentForm.addEventListener('submit', (event) => {
@@ -210,7 +210,7 @@ const addComment = (memeCard, meme) => {
             user_id: 2,
             meme_id: meme.id
         }
-
+        console.log(meme)
 
         let reqPackage = {}
             reqPackage.headers = {"Content-Type" : "application/json"}
@@ -309,7 +309,7 @@ const newestMemes = () => {
     allOff()
     const newestBtn = document.querySelector('#newest-btn')
         newestBtn.classList.add('primary')
-    result = allMemes.sort(function(a, b){return b.created_at - a.created_at})
+    result = allMemes.sort(function(a, b){return new Date(b.created_at) - new Date(a.created_at)})
     // debugger
     result.forEach(meme => renderMemes(meme))
 }
@@ -319,7 +319,7 @@ const oldestMemes = () => {
     allOff()
     const oldestBtn = document.querySelector('#oldest-btn')
         oldestBtn.classList.add('primary')  
-    result = allMemes.sort(function(a, b){return a.created_at - b.created_at})
+    result = allMemes.sort(function(a, b){return new Date(a.created_at) - new Date(b.created_at)})
     // debugger
     result.forEach(meme => renderMemes(meme))
 }
@@ -411,9 +411,13 @@ const deleteMeme = (meme) => {
 
 
 const bodyBg = document.body
+const footerBg = document.querySelector('.footer')
+const modalBg = document.querySelector('.modal')
 const darkToggle = document.querySelector("#slider")
 darkToggle.addEventListener("click", function() {
   bodyBg.classList.toggle("dark-mode")
+  footerBg.classList.toggle("dark-mode")
+  modalBg.classList.toggle("dark-mode")
 })
 
 
