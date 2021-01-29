@@ -10,7 +10,9 @@ class MemesController < ApplicationController
    end
 
    def create
-      meme = Meme.create(meme_params)
+      meme = Meme.new(meme_params)
+      meme.user_id = User.first.id
+      meme.save
       render json: meme
    end
 
@@ -22,12 +24,15 @@ class MemesController < ApplicationController
 
   
    def destroy
+      meme = Meme.find(params[:id]).destroy
+      render json: Meme.all.to_json(meme_serializer_options)
    end
 
 
    private
 
    def meme_params
+      # params.require(:meme).permit(:title, :likes, :description, :img_url, :user_id)
       params.require(:meme).permit(:title, :likes, :description, :img_url, :user_id)
    end
 
@@ -35,10 +40,11 @@ class MemesController < ApplicationController
       {
          include: {
             comments: {
-               except: [:updated_at, :meme_id, :id]
+               except: [:updated_at, :meme_id]
             }
          }, 
-         except: [:created_at, :updated_at]
+         # except: [:updated_at]
+         # except: [:created_at, :updated_at]
       }
    end
    

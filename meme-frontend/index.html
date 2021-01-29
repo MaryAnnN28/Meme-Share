@@ -12,9 +12,11 @@
 
   <!-- hero--------------------- Needed for Bulma------------------------------>
     <section class="hero">
+
+    <!-- <section class="hero is-primary"> -->
       <div class="hero-body">
         <div class="container">
-          <img src= "https://i.imgur.com/rpG0pVW.gif" alt="meme banner" />
+
         </div>
       </div>
     </section>
@@ -34,21 +36,17 @@
   
 
    <div id="myBtnContainer">
-    <button id="all-memes" class="btn primary" onclick="functionAll('all')"> <b>SHOW ALL</b></button>
-    <button class="btn" id="viral-memes" name="viral-btn" onclick="function1('viral')"> MOST VIRAL</button>
-    <button class="btn" id="liked-memes" name="liked-btn" onclick="function2('liked')"> MOST LIKED</button>
-    <button class="btn" id="newest-memes" name="newest-btn" onclick="function2('newest')"> NEWEST</button>
-    <button class="btn" id="oldest-memes" name="oldest-btn" onclick="function4('oldest')"> OLDEST</button>
-
-
-    <div align="right" id="type-filter" class="type-filter">
+    <button id="show-all" class="btn" name="show-all"> SHOW ALL</button>
+    <button id="viral-btn" class="btn" name="viral-btn"> MOST VIRAL</button>
+    <button id="liked-btn" class="btn" name="liked-btn"> MOST LIKED</button>
+    <button id="newest-btn" class="btn" name="newest-btn"> NEWEST</button>
+    <button id="oldest-btn" class="btn" name="oldest-btn"> OLDEST</button>
+  </div> 
+ 
+      <div align="right" id="type-filter" class="type-filter">
       <input class="type-filter" id="filter" type="text" id="filter" placeholder="Type to filter" />
     </div>
       
-    
-    
-  </div> 
- 
   <br><br>
 
 
@@ -81,15 +79,16 @@
     </div>
   
   <!-- create form------------------------------------------------------------->
-  <div class="form-group">
-        <form id="memeForm">
+
+    <form class="memeForm" id="memeForm">
+      <div class="form-group">
         <ul>
-        <h3>Create Meme</h3>
-            <li><input name="title" class="form-control mb-2" type="text"placeholder="Name">
-            <li><input name="img_url" class="form-control mb-2" type="text"placeholder="Image URL">
-            <li><input name="description" class="form-control mb-2" type="text" placeholder="Description">
-            <li><input class="btn btn-primary" type="submit">
-          </ul>
+          <h3>Create Meme</h3>
+          <li><input name="title" class="form-control mb-2" type="text"placeholder="Name">
+          <li><input name="img_url" class="form-control mb-2" type="text"placeholder="Image URL">
+          <li><input name="description" class="form-control mb-2" type="text" placeholder="Description">
+          <li><input class="btn btn-primary" type="submit">
+        </ul>
       </div>
     </form>             
 
@@ -111,7 +110,7 @@
     </footer>
   
     <script src="src/index.js"></script>
-    <script src="src/meme.js"></script>
+    <!-- <script src="src/meme.js"></script> -->
 
   </body>
 </html>

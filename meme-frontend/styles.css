@@ -1,3 +1,10 @@
+.memeForm ul {
+  color: white;
+  position:absolute;
+  top: 200px;
+  right: 10px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -5,8 +12,17 @@
   width: 100%;
 }
 
-.hero {
+.hero{
   background-color: black;
+  min-height: 400px;
+  background-image: url(https://i.imgur.com/rpG0pVW.gif);
+  background-repeat: no-repeat;
+  background-size: 1000px 400px;
+  /* background-position: center top; */
+}
+
+.hero .subtitle{
+  color: white;
 }
 
 h1 {
@@ -48,109 +64,97 @@ h5 {
 
 
 body {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #404040;
-    background-color: #fff;
-  }
-  
-  header {
-    float: left;
-    width: 225px;
-    height: auto;
-    border-right: solid #404040 1px;
-    border-bottom: solid #404040 1px;
-    border-radius: 0 0 6px 0;
-    padding: 10px;
-    margin-right: 10px;
-  }
-  
-  h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 52px;
-    color: #3493d5;
-    margin: 10px 0;
-  }
-  
-  ul {
-    padding: 0;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  nav ul {
-    margin-left: 15px;
-  }
-  
-  nav ul li {
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  nav ul li:hover {
-    background-color: #f1a458;
-    color: #fff;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #404040;
+}
 
-   /* CSS for Filter  */
-
-  .container {
-    overflow: hidden;
-  
-  }
-  
-  .filterDiv {
-    float: left;
-    background-color: #2196F3;
-    color: #ffffff;
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    margin: 100px;
-    display: none; /* Hidden by default */
-  }
-  
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
-  }
-  
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  /* Add a light grey background on mouse-over */
-  .btn:hover {
-    background-color: rgb(221, 221, 221);
-  }
-
-  
+header {
+  float: left;
+  width: 225px;
+  height: auto;
+  border-right: solid #404040 1px;
+  border-bottom: solid #404040 1px;
+  border-radius: 0 0 6px 0;
+  padding: 10px;
+  margin-right: 10px;
+}
 
 
-  .form-group {
-    position:absolute;
-    top:10px;
-    right: 5px;
-    width: 200px;
-  }
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 52px;
+  color: #3493d5;
+  margin: 10px 0;
+}
 
-  /* Add a dark background to the active button */
-  .btn.primary {
-    background-color: #666;
-    color: white;
-  }
+ul {
+  padding: 0;
+}
 
+li {
+  list-style: none;
+}
 
+nav ul {
+  margin-left: 15px;
+}
+
+nav ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: #f1a458;
+  color: #fff;
+}
+
+  /* CSS for Filter  */
+
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 100px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: rgb(221, 221, 221);
+}
+
+/* Add a dark background to the active button */
+.btn.primary {
+  background-color: #666;
+  color: white;
+  font-weight: bold;
+}
 
 
   /*------------Previous & Next Page Buttons for Bottom of Memes Card ------------- */
@@ -243,3 +247,7 @@ body {
     background-color: black;
     color: white;
   }
+
+.column {
+  display: flex;
+}
