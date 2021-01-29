@@ -33,7 +33,7 @@ class MemesController < ApplicationController
 
    def meme_params
       # params.require(:meme).permit(:title, :likes, :description, :img_url, :user_id)
-      params.require(:meme).permit(:title, :likes, :description, :img_url, :user_id)
+      params.require(:meme).permit(:title, :likes, :description, :img_url, :user_id, :created_at)
    end
 
    def meme_serializer_options()
