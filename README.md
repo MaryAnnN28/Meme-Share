@@ -2,6 +2,21 @@
 
 Video demo can be found [here](https://www.youtube.com/watch?v=YNdfQNBu2DI).
 
+To start this project run:
+
+  In meme-app:
+  ``` javascript
+    rails db:migrate
+    rails db:seed
+    rails s
+  ```
+  
+  In meme-frontend:
+  ``` javascript
+    npm install
+    npm start
+  ```
+
 ABOUT: 
 Meme Share is a meme browsing and sharing platform. 
 You can browse, like, comment and add your favorite memes. 
