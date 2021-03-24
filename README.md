@@ -1,5 +1,7 @@
 ![alt text](https://i.imgur.com/rpG0pVW.gif)
 
+Video demo can be found [here](https://www.youtube.com/watch?v=YNdfQNBu2DI).
+
 ABOUT: 
 Meme Share is a meme browsing and sharing platform. 
 You can browse, like, comment and add your favorite memes. 
